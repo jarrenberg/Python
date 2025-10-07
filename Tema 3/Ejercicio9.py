@@ -24,4 +24,3 @@ for i in range (int((base/2)+1)):
     espacios-=1
     print("*"*numAsteriscos)
     numAsteriscos+=2
-
