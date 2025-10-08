@@ -75,4 +75,4 @@ def main ():
           except:
                print("No se ha introducido una accion valida")
 
-triangulo(5)
+main()

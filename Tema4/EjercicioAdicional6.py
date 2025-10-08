@@ -17,23 +17,25 @@ def main():
           print("a) Pasar de Celsius a Farenheit")
           print("b) Pasar de Fareneheit a Celsius")
           print("Introduzca 'fin' para salir.")
-          accion = input().lower()
-          if(accion == "fin"):
-               salir=True
-          else:
-               try:
-                    match accion:
-                         case n if accion=="a":
-                              n = float(input("Introduzca el valor de la temperatura: "))
-                              temp = celsius_a_farenheit(n)
-                              print(f"{n}ºC es equivalente a {temp}ºF")
-                         case n if accion=="b":
-                              n = float(input("Introduzca el valor de la temperatura: "))
-                              temp = farenheit_a_celsius(n)
-                              print(f"{n}ºf es equivalente a {temp}ºC")
-                         case _:
-                              print("Se ha introducido una accion no valida")
-               except ValueError:
-                    print("No se ha introducido un numero valido")
+          accion = input()
+          if(accion.isalpha==True):
+               accion=accion.lower()
+               if(accion == "fin"):
+                    salir=True
+               else:
+                    try:
+                         match accion:
+                              case n if accion=="a":
+                                   n = float(input("Introduzca el valor de la temperatura: "))
+                                   temp = celsius_a_farenheit(n)
+                                   print(f"{n}ºC es equivalente a {temp}ºF")
+                              case n if accion=="b":
+                                   n = float(input("Introduzca el valor de la temperatura: "))
+                                   temp = farenheit_a_celsius(n)
+                                   print(f"{n}ºf es equivalente a {temp}ºC")
+                              case _:
+                                   print("Se ha introducido una accion no valida")
+                    except ValueError:
+                         print("No se ha introducido un numero valido")
 main()
           

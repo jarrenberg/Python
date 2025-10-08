@@ -14,7 +14,6 @@ def contar_caracter(s: str, c: str) -> int:
 def main ():
     cadena = input("Introduzca una cadena de texto: ")
     caracter = input("Introduzca el caracter a comparar: ")[0]
-    print(caracter)
-    print(f"El caracter {caracter} aparece {contar_caracter(cadena,caracter)} vez/veces en la cadena '{cadena}'")    
+    print(f"El caracter '{caracter}' aparece {contar_caracter(cadena,caracter)} vez/veces en la cadena '{cadena}'")    
     
 main()
